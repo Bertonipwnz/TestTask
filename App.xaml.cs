@@ -14,7 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Microsoft.Data.Sqlite;
+using Microsoft.Data.Sqlite.Internal;
 namespace TestTaskUWP
 {
     /// <summary>
@@ -30,6 +31,21 @@ namespace TestTaskUWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            SqliteEngine.UseWinSqlite3(); 
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteSample.db"))
+            {
+                db.Open();
+                String tableCommand = "CREATE TABLE IF NOT EXISTS Transaction (ID_Transaction INTEGER PRIMARY KEY AUTOINCREMENT, Amount_Transaction INTEGER NOT NULL, Date_and_Time_Transaction DATETIME NOT NULL, Type_Transaction VARCHAR(10) NOT NULL, Category_Transaction VARCHAR(20) NOT NULL, Comment_Transaction NOT NULL";
+                SqliteCommand createTable = new SqliteCommand(tableCommand, db);
+                try
+                {
+                    createTable.ExecuteReader();
+                }
+                catch (SqliteException e)
+                {
+                    
+                }
+            }
         }
 
         /// <summary>
