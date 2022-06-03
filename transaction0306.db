@@ -1,0 +1,4 @@
+CREATE TABLE `Transaction` (
+	`ID_Transaction` INT NOT NULL AUTO_INCREMENT,
+	`Amount_Transaction` INT
+);

@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.Data.Sqlite;
-using Microsoft.Data.Sqlite.Internal;
+using Microsoft.EntityFrameworkCore;
 namespace TestTaskUWP
 {
     /// <summary>
@@ -31,21 +20,14 @@ namespace TestTaskUWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            SqliteEngine.UseWinSqlite3(); 
-            using (SqliteConnection db = new SqliteConnection("Filename=sqliteSample.db"))
-            {
-                db.Open();
-                String tableCommand = "CREATE TABLE IF NOT EXISTS Transaction (ID_Transaction INTEGER PRIMARY KEY AUTOINCREMENT, Amount_Transaction INTEGER NOT NULL, Date_and_Time_Transaction DATETIME NOT NULL, Type_Transaction VARCHAR(10) NOT NULL, Category_Transaction VARCHAR(20) NOT NULL, Comment_Transaction NOT NULL";
-                SqliteCommand createTable = new SqliteCommand(tableCommand, db);
-                try
-                {
-                    createTable.ExecuteReader();
-                }
-                catch (SqliteException e)
-                {
-                    
-                }
+            using (var db = new ViewModels.TransactionContext())
+            {           
+                db.Database.Migrate();
             }
+            
+
+            
+         
         }
 
         /// <summary>
@@ -82,7 +64,7 @@ namespace TestTaskUWP
                     // Если стек навигации не восстанавливается для перехода к первой странице,
                     // настройка новой страницы путем передачи необходимой информации в качестве параметра
                     // навигации
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(Views.MainPage), e.Arguments);
                 }
                 // Обеспечение активности текущего окна
                 Window.Current.Activate();
