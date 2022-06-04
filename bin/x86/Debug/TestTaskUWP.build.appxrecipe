@@ -127,6 +127,9 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.netcore.portable.compatibility\1.0.2\lib\netcore50\System.dll">
       <PackagePath>System.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\romas\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.visualbasic\10.0.1\lib\netcore50\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
     </AppxPackagedFile>
@@ -445,6 +448,15 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\romas\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\romas\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\romas\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -481,8 +493,20 @@
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x86\Debug\Views\HistoryTransaction.xbf">
+      <PackagePath>Views\HistoryTransaction.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x86\Debug\Views\NewOperation.xbf">
+      <PackagePath>Views\NewOperation.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x86\Debug\Views\Score.xbf">
+      <PackagePath>Views\Score.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x86\Debug\Views\TestView.xbf">
+      <PackagePath>Views\TestView.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

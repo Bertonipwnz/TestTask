@@ -8,5 +8,9 @@ Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 TestTaskUWP.xr.xml
+Views\HistoryTransaction.xbf
 Views\MainPage.xbf
+Views\NewOperation.xbf
+Views\Score.xbf
+Views\TestView.xbf
 Properties\Default.rd.xml

@@ -7,7 +7,7 @@ using TestTaskUWP.Models;
 
 namespace TestTaskUWP.Migrations
 {
-    [DbContext(typeof(ViewModels.TransactionContext))]
+    [DbContext(typeof(TransactionContext))]
     [Migration("20220603153147_first")]
     partial class first
     {

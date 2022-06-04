@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="TestTaskUWP.Views.HistoryTransaction"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestTaskUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d">
+
+
+    <!--<Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="saveButton" Label="Добавить" Icon="Add" Click="Add_Click" />
+            <AppBarButton x:Name="editButton" Label="Изменить" Icon="Edit" Click="Edit_Click" />
+            <AppBarButton x:Name="deleteButton" Label="Удалить" Icon="Delete" Click="Delete_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>-->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListView x:ConnectionId='2' x:Name="companiesList">
+            <ListView.ItemTemplate>
+                <DataTemplate                                       >
+                    <StackPanel>
+                        <TextBlock Text="{Binding Transitions}"  FontSize="40" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+
+
+

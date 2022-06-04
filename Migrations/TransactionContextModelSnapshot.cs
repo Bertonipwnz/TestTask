@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using TestTaskUWP.ViewModels;
+using TestTaskUWP.Models;
 
 namespace TestTaskUWP.Migrations
 {
@@ -15,22 +15,36 @@ namespace TestTaskUWP.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.3");
 
-            modelBuilder.Entity("TestTaskUWP.Models.Transaction", b =>
+            modelBuilder.Entity("TestTaskUWP.Models.Phone", b =>
                 {
-                    b.Property<int>("ID_Transaction")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Amount_Transaction");
+                    b.Property<int>("Price");
 
-                    b.Property<string>("Category_Transaction");
+                    b.Property<string>("Title");
 
-                    b.Property<string>("Comment_Transaction");
+                    b.HasKey("Id");
 
-                    b.Property<DateTime>("Date_and_Time_Transaction");
+                    b.ToTable("Phones");
+                });
 
-                    b.Property<string>("Type_Transaction");
+            modelBuilder.Entity("TestTaskUWP.Models.Transaction", b =>
+                {
+                    b.Property<int>("id_Transaction")
+                        .ValueGeneratedOnAdd();
 
-                    b.HasKey("ID_Transaction");
+                    b.Property<int>("amount_Transaction");
+
+                    b.Property<string>("category_Transaction");
+
+                    b.Property<string>("comment_Transaction");
+
+                    b.Property<DateTime>("date_and_Time_Transaction");
+
+                    b.Property<string>("type_Transaction");
+
+                    b.HasKey("id_Transaction");
 
                     b.ToTable("Transaction");
                 });
