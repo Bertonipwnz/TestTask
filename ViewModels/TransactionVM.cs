@@ -1,22 +1,35 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using TestTaskUWP.Models;
-
+using TestTaskUWP.Data;
 namespace TestTaskUWP.ViewModels
 {
-
-    public class TransactionVM: NotificationBase<Transaction>
+    /// <summary>
+    /// Модель представления операций
+    /// </summary>
+    public class TransactionVM : BaseViewModel<Transaction>
     {
-
         private Transaction transaction;
         private readonly Repository repository;
+        public ObservableCollection<Transaction> Transactions { get; set; }
+        public List<Transaction> TransactionsList { get; set; }
+     
         public TransactionVM()
         {
             transaction = new Transaction();
             repository = new Repository();
+            //Запись всех данных таблицы в лист и коллекцию
+            using(TransactionContext db = new TransactionContext())
+            {
+                Transactions = new ObservableCollection<Transaction>(db.Transactions.ToList());
+                TransactionsList = new List<Transaction>(db.Transactions.ToList());
+            }
+            
+
         }
-
-
+  
         public int ID_Transaction
         {
             get { return This.id_Transaction; }
@@ -32,7 +45,7 @@ namespace TestTaskUWP.ViewModels
         public DateTime Date_and_Time_Transaction
         {
             get { return This.date_and_Time_Transaction; }
-            set { SetProperty(This.date_and_Time_Transaction, DateTime.Now, () => This.date_and_Time_Transaction = DateTime.Now); }
+            set { SetProperty(This.date_and_Time_Transaction, value, () => This.date_and_Time_Transaction = value); }
 
         }
 
@@ -56,29 +69,60 @@ namespace TestTaskUWP.ViewModels
             set { SetProperty(This.comment_Transaction, value, () => This.comment_Transaction = value); }
 
         }
+        public int Amount_Money
+        {
+            get { return This.amount_Money; }
+            set { SetProperty(This.amount_Money, value, () => This.amount_Money = value); }
+        }
 
+        //Сохранение данных
         public void Save()
         {
             repository.SaveTransaction(This);
         }
-
+        
+        //Загрузка записи
         public void Load()
         {
             transaction = repository.LoadTransaction();
             ID_Transaction = transaction.id_Transaction;
             Amount_Transaction = transaction.amount_Transaction;
             Date_and_Time_Transaction = transaction.date_and_Time_Transaction;
+            Date_and_Time_Transaction = Convert.ToDateTime(Date_and_Time_Transaction.ToString("G"));
             Type_Transaction = transaction.type_Transaction;
             Category_Transaction = transaction.category_Transaction;
             Comment_Transaction = transaction.comment_Transaction;
-
+            Amount_Money = transaction.amount_Money;
         }
-          public List<Transaction> SelectAllTransaction()
+
+        //Загрузка текущего бюджета
+        public void LoadAmount()
+        {
+            transaction = repository.LoadAmount();
+            Amount_Money = transaction.amount_Money;
+        }
+
+        /*  public void LoadTransactions()
           {
-              return repository.GetAllTransaction();
+              var transactions = repository.GetAllTransaction();
+              TransactionsGG = new ObservableCollection<TransactionVM>();
+              foreach (var trans in transactions)
+              {
+                  var avm = new TransactionVM(trans);
+                  TransactionsGG.Add(avm);
+              }
+
           }
+          public void LoadingTransaction()
+          {
+              ts = repository.GetAllTransaction();
+
+          }
+
+          */
+
        
-      
+
 
     }
 }

@@ -52,10 +52,6 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.13, )"
-            },
-            "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
-              "target": "Package",
-              "version": "[4.0.0, )"
             }
           }
         }

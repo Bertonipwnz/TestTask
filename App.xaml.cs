@@ -4,8 +4,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.EntityFrameworkCore;
-using TestTaskUWP.Models;
+
 namespace TestTaskUWP
 {
     /// <summary>
@@ -21,14 +20,6 @@ namespace TestTaskUWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-       /*     using (var db = new TransactionContext())
-            {           
-                db.Database.Migrate();
-            }
-            */
-
-            
-         
         }
 
         /// <summary>

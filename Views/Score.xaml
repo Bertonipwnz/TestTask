@@ -10,6 +10,7 @@
 
     <Grid>
         <TextBlock Text="Баланс:" FontSize="30" Margin="10,24,0,0"/>
-        <TextBlock Text="Баланс" FontSize="40" Margin="10,60,0,0" FontWeight="Bold"/>
+        <TextBlock Text ="$" FontSize="40" Margin="10,60,0,0" FontWeight="Bold"/>
+        <TextBlock Text="{x:Bind Transaction.Amount_Money}" FontSize="40" Margin="34,60,0,0" FontWeight="Bold"/>
     </Grid>
 </Page>

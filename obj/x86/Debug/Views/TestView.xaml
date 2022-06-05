@@ -12,7 +12,7 @@
 
         <TextBox x:ConnectionId='2'                                                          HorizontalAlignment="Left" Margin="50,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
         <TextBlock HorizontalAlignment="Left" Margin="50,182,0,0" TextWrapping="Wrap" Text="List:" VerticalAlignment="Top" Width="71"/>
-        <TextBlock x:ConnectionId='3'                                                          HorizontalAlignment="Left" Margin="50,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='3'                                                                   HorizontalAlignment="Left" Margin="50,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         
         <Button x:ConnectionId='4' Content="Save"                                   HorizontalAlignment="Left" Margin="467,333,0,0" VerticalAlignment="Top"/>
         <Button x:ConnectionId='5' Content="Load"                                   HorizontalAlignment="Left" Margin="535,335,0,0" VerticalAlignment="Top"/>

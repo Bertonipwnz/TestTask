@@ -22,13 +22,16 @@ namespace TestTaskUWP.Views
     /// </summary>
     public sealed partial class NewOperation : Page
     {
+        public TransactionVM Transaction { get; set; }
         public NewOperation()
         {
             this.InitializeComponent();
             Transaction = new TransactionVM();
-
         }
-        public TransactionVM Transaction { get; set; }
+
+        /// <summary>
+        /// Обнуление всех полей
+        /// </summary>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             comboBoxForTypeOperation.SelectedItem = null;
@@ -37,17 +40,22 @@ namespace TestTaskUWP.Views
             textBoxForCommentOperation.Text = "";
         }
 
+        /// <summary>
+        /// Кнопка добавления записи
+        /// </summary>
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            //Проверка ввода
             try
-            {
+            {   //Если в поле введено не число или не выбран элемент в комбобокс, то вызываем исключение
                 Convert.ToInt32(textBoxForAmountOperation.Text);
                 if (string.IsNullOrEmpty(Convert.ToString(comboBoxForTypeOperation.SelectedItem)))
                     throw new FormatException();
                 if (string.IsNullOrEmpty(Convert.ToString(comboBoxForCategoryOperation.SelectedItem)))
                     throw new FormatException();
 
+
+                //Создаём уведомление если операция прошла успешно
                 ContentDialog checkTextBox = new ContentDialog()
                 {
                     Title = "Уведомление",
@@ -55,9 +63,14 @@ namespace TestTaskUWP.Views
                     PrimaryButtonText = "ОК"
                 };
                 await checkTextBox.ShowAsync();
+                //Сохраняем данные
                 Transaction.Save();
-            
-            
+                //Обновляем окно
+                Frame fr = new Frame();
+                Window.Current.Content = fr;
+                fr.Navigate(typeof(MainPage));
+                Window.Current.Activate();
+
             }
             catch (FormatException)
             {

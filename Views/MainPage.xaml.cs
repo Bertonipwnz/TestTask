@@ -17,6 +17,7 @@ namespace TestTaskUWP.Views
             this.InitializeComponent();
 
         }
+
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
 
@@ -33,38 +34,8 @@ namespace TestTaskUWP.Views
                 case "NewOperation":
                     ContentFrame.Navigate(typeof(NewOperation));
                     break;
-                case "Test":
-                    ContentFrame.Navigate(typeof(TestView));
-                    break;
+
             }
         }
-
-        /* private void Page_Loaded(object sender, RoutedEventArgs e)
-         {
-             using (var db = new TransactionContext())
-             {
-                // Guestbook.ItemsSource = db.Transactions.ToList();
-             }
-         }
-         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-         {
-             Transaction selectedTransaction = (Transaction)e.ClickedItem;
-             //TransactionGrid.Header = selectedTransaction.id_Transaction;
-         }
-            private void Add_Transaction(object sender, RoutedEventArgs e)
-            {
-                using (var db = new ViewModels.TransactionContext())
-                {
-                    var post = new Transaction { type_Transaction = txtNewPost.Text, date_and_Time_Transaction = System.DateTime.Now };
-                    db.Transactions.Add(post);
-                   db.SaveChanges();
-
-                    Guestbook.ItemsSource = db.Transactions.ToList();
-                }
-
-            }*/
-
-
-
     }
 }

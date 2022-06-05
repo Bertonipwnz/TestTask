@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iDPEzmyt97yK7JAyZneobkXriurz/0tIuSqI+vEpb1WyRknQ53vZfAGXfETOUAXtK8IdEXhlBp8JPwaR0Lu1ug==",
+  "dgSpecHash": "YDnY5+TSL7gT671olvR2MnVZSkHTFGEP7jaFzCgt9pVhXCOEPFbJchyYIZ7i34QemQBcRNJiX74ZDGvtQBW0Mw==",
   "success": true,
   "projectFilePath": "D:\\ProjectSharp\\TestTaskUWP\\TestTaskUWP.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,6 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.targets\\1.0.2\\microsoft.netcore.targets.1.0.2.nupkg.sha512",
     "C:\\Users\\romas\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.2.13\\microsoft.netcore.universalwindowsplatform.6.2.13.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.windows.apisets\\1.0.1\\microsoft.netcore.windows.apisets.1.0.1.nupkg.sha512",
-    "C:\\Users\\romas\\.nuget\\packages\\microsoft.toolkit.uwp.ui.controls.datagrid\\4.0.0\\microsoft.toolkit.uwp.ui.controls.datagrid.4.0.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.visualbasic\\10.0.1\\microsoft.visualbasic.10.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",
     "C:\\Users\\romas\\.nuget\\packages\\remotion.linq\\2.1.1\\remotion.linq.2.1.1.nupkg.sha512",

@@ -9,57 +9,13 @@
 
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
-   <!-- <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView Name="Guestbook">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Type_Transaction}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-        <TextBox Name="txtNewPost"></TextBox>
-        <Button Click="Add_Transaction">Добавить сообщение</Button>
-       
-    </Grid>-->
-    
-    <!--<Grid>
-        <GridView x:Name="TransactionGrid" IsItemClickEnabled="True"
-                  SelectionMode="None" ItemClick="GridView_ItemClick">
-        <GridView.ItemTemplate>
-            <DataTemplate>
-                <Grid Width="1200">
-                    <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding id_Transaction}" Grid.Column="0" />
-                        <TextBlock Text="{Binding amount_Transaction}" Grid.Column="1" />
-                        <TextBlock Text="{Binding date_and_Time_Transaction}" Grid.Column="2" />
-                        <TextBlock Text="{Binding type_Transaction}" Grid.Column="3" />
-                        <TextBlock Text="{Binding category_Transaction}" Grid.Column="4" />
-                        <TextBlock Text="{Binding comment_Transaction}" Grid.Column="5" />
-                    </Grid>
-            </DataTemplate>
-        </GridView.ItemTemplate>
-        <GridView.Items>
-                <gr:Transaction id_Transaction="1" amount_Transaction="500" type_Transaction="Доход" category_Transaction="Развлечение" comment_Transaction=""/>
-            </GridView.Items>
-    </GridView>
-    </Grid>-->
+ 
     <Grid>
         <NavigationView IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="False" IsSettingsVisible="False" ItemInvoked="NavigationView_ItemInvoked">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Счёт" Name="ViewScore"></NavigationViewItem>
                 <NavigationViewItem Content="Новая операция" Name="NewOperation"></NavigationViewItem>
                 <NavigationViewItem Content="История" Name="ViewAllTransaction" ></NavigationViewItem>
-                <NavigationViewItem Content="Test" Name="Test" ></NavigationViewItem>
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame"/>
         </NavigationView>
