@@ -9,7 +9,7 @@
       <a href="#what-is-it">What is it?</a>
     </li>
      <li>
-       <a href="#hod-does-it-work">How does it work?</a>
+       <a href="#how-does-it-work">How does it work?</a>
     </li>
     <li>
       <a href="#built-with">Built With</a>
@@ -18,7 +18,7 @@
       <a href="#installation">Installation</a>
     </li>
     <li>
-      <a href="#possible-error">Possible errors</a>
+      <a href="#possible-errors">Possible Errors</a>
     </li>
     <li>
       <a href="#contacts">Constacts</a>
