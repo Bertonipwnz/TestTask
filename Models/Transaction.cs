@@ -34,6 +34,4 @@ namespace TestTaskUWP.Models
         public int amount_Money { get; set; }
     }
 
-
-
 }

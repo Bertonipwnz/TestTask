@@ -19,9 +19,14 @@ namespace TestTaskUWP.Data
                 model.date_and_Time_Transaction = DateTime.Now;
                 //Проверка доход или расход, в зависимости от этого отнимаем или прибавляем к сумме
                 if (model.type_Transaction == "Доход")
+                {
                     model.amount_Money = db.Transactions.Last().amount_Money + model.amount_Transaction;
+                }
                 else
+                {
                     model.amount_Money = db.Transactions.Last().amount_Money - model.amount_Transaction;
+                }
+
                 //Добавление данных в базу
                 if (model.id_Transaction > 0)
                 {
@@ -54,15 +59,6 @@ namespace TestTaskUWP.Data
             using (var db = new TransactionContext())
             {
                 return (from t in db.Transactions select t).Last();
-            }
-        }
-
-        //Получение всех записей
-        public List<Transaction> GetAllTransaction()
-        {
-            using (var db = new TransactionContext())
-            {
-                return db.Transactions.ToList();
             }
         }
 

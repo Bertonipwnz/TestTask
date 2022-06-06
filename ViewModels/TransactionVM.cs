@@ -11,14 +11,14 @@ namespace TestTaskUWP.ViewModels
     /// </summary>
     public class TransactionVM : BaseViewModel<Transaction>
     {
-        private Transaction transaction;
+        private Transaction _transaction;
         private readonly Repository repository;
         public ObservableCollection<Transaction> Transactions { get; set; }
         public List<Transaction> TransactionsList { get; set; }
 
         public TransactionVM()
         {
-            transaction = new Transaction();
+            _transaction = new Transaction();
             repository = new Repository();
             //Запись всех данных таблицы в лист и коллекцию
             using (TransactionContext db = new TransactionContext())
@@ -82,22 +82,22 @@ namespace TestTaskUWP.ViewModels
         //Загрузка записи
         public void Load()
         {
-            transaction = repository.LoadTransaction();
-            ID_Transaction = transaction.id_Transaction;
-            Amount_Transaction = transaction.amount_Transaction;
-            Date_and_Time_Transaction = transaction.date_and_Time_Transaction;
+            _transaction = repository.LoadTransaction();
+            ID_Transaction = _transaction.id_Transaction;
+            Amount_Transaction = _transaction.amount_Transaction;
+            Date_and_Time_Transaction = _transaction.date_and_Time_Transaction;
             Date_and_Time_Transaction = Convert.ToDateTime(Date_and_Time_Transaction.ToString("G"));
-            Type_Transaction = transaction.type_Transaction;
-            Category_Transaction = transaction.category_Transaction;
-            Comment_Transaction = transaction.comment_Transaction;
-            Amount_Money = transaction.amount_Money;
+            Type_Transaction = _transaction.type_Transaction;
+            Category_Transaction = _transaction.category_Transaction;
+            Comment_Transaction = _transaction.comment_Transaction;
+            Amount_Money = _transaction.amount_Money;
         }
 
         //Загрузка текущего бюджета
         public void LoadAmount()
         {
-            transaction = repository.LoadAmount();
-            Amount_Money = transaction.amount_Money;
+            _transaction = repository.LoadAmount();
+            Amount_Money = _transaction.amount_Money;
         }
     }
 }

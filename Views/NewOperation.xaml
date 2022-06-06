@@ -11,7 +11,7 @@
     <Grid >
         <TextBlock HorizontalAlignment="Left" Margin="10,24,0,0" TextWrapping="Wrap" Text="Сумма операции:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
         <TextBlock HorizontalAlignment="Left" Margin="252,24,0,0" TextWrapping="Wrap" Text="Тип операции:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
-        <TextBox x:Name="textBoxForAmountOperation" Margin="12,54,0,0" HorizontalAlignment="Left" Width="199" Height="33" VerticalAlignment="Top" Text="{x:Bind Transaction.Amount_Transaction,Mode=TwoWay}"/>
+        <TextBox x:Name="textBoxForAmountOperation" Margin="12,54,0,0" HorizontalAlignment="Left" Width="199" Height="33" VerticalAlignment="Top" Text="{x:Bind Transaction.Amount_Transaction,Mode=TwoWay}" />
         <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="Категория:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
         <ComboBox x:Name="comboBoxForCategoryOperation"  Margin="12,148,0,0" Width="540" SelectedItem="{x:Bind Transaction.Category_Transaction,Mode=TwoWay}">
             <x:String>Заработная плата</x:String>
@@ -24,8 +24,8 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="Комментарий:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
         <TextBox x:Name="textBoxForCommentOperation" Margin="12,240,0,0" HorizontalAlignment="Left" Width="542" Height="33" VerticalAlignment="Top" Text="{x:Bind Transaction.Comment_Transaction,Mode=TwoWay}"/>
-        <Button Content="Сбросить" Margin="12,328,0,0" VerticalAlignment="Top" Height="58" Width="256" FontSize="25" Click="Button_Click" CornerRadius="10" Background="WhiteSmoke"/>
-        <Button Content="Записать" Margin="296,328,0,0" Height="58" Width="256" FontSize="25" VerticalAlignment="Top" Background="SkyBlue" CornerRadius="10" Click="Button_Click_1" />
+        <Button Content="Сбросить" Margin="12,328,0,0" VerticalAlignment="Top" Height="58" Width="256" FontSize="25" Click="Clear_Field" CornerRadius="10" Background="WhiteSmoke"/>
+        <Button Content="Записать" Margin="296,328,0,0" Height="58" Width="256" FontSize="25" VerticalAlignment="Top" Background="SkyBlue" CornerRadius="10" Click="Add_Transaction" />
         
     </Grid>
 </Page>

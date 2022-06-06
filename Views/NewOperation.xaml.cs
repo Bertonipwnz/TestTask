@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using TestTaskUWP.ViewModels;
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TestTaskUWP.Views
 {
@@ -32,7 +20,7 @@ namespace TestTaskUWP.Views
         /// <summary>
         /// Обнуление всех полей
         /// </summary>
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Clear_Field(object sender, RoutedEventArgs e)
         {
             comboBoxForTypeOperation.SelectedItem = null;
             comboBoxForCategoryOperation.SelectedItem = null;
@@ -43,7 +31,7 @@ namespace TestTaskUWP.Views
         /// <summary>
         /// Кнопка добавления записи
         /// </summary>
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        private async void Add_Transaction(object sender, RoutedEventArgs e)
         {
             //Проверка ввода
             try
@@ -83,7 +71,6 @@ namespace TestTaskUWP.Views
                 };
                 await checkTextBox.ShowAsync();
             }
-            
         }
     }
 }

@@ -11,7 +11,7 @@
     <Grid >
         <TextBlock HorizontalAlignment="Left" Margin="10,24,0,0" TextWrapping="Wrap" Text="Сумма операции:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
         <TextBlock HorizontalAlignment="Left" Margin="252,24,0,0" TextWrapping="Wrap" Text="Тип операции:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
-        <TextBox x:ConnectionId='2' x:Name="textBoxForAmountOperation" Margin="12,54,0,0" HorizontalAlignment="Left" Width="199" Height="33" VerticalAlignment="Top"                                                           />
+        <TextBox x:ConnectionId='2' x:Name="textBoxForAmountOperation" Margin="12,54,0,0" HorizontalAlignment="Left" Width="199" Height="33" VerticalAlignment="Top"                                                            />
         <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="Категория:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
         <ComboBox x:ConnectionId='3' x:Name="comboBoxForCategoryOperation"  Margin="12,148,0,0" Width="540"                                                                     >
             <x:String>Заработная плата</x:String>
@@ -24,8 +24,8 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="Комментарий:" VerticalAlignment="Top" Height="33" Width="205" FontSize="25" FontFamily="Blackadder ITC"/>
         <TextBox x:ConnectionId='5' x:Name="textBoxForCommentOperation" Margin="12,240,0,0" HorizontalAlignment="Left" Width="542" Height="33" VerticalAlignment="Top"                                                            />
-        <Button x:ConnectionId='6' Content="Сбросить" Margin="12,328,0,0" VerticalAlignment="Top" Height="58" Width="256" FontSize="25"                      CornerRadius="10" Background="WhiteSmoke"/>
-        <Button x:ConnectionId='7' Content="Записать" Margin="296,328,0,0" Height="58" Width="256" FontSize="25" VerticalAlignment="Top" Background="SkyBlue" CornerRadius="10"                        />
+        <Button x:ConnectionId='6' Content="Сбросить" Margin="12,328,0,0" VerticalAlignment="Top" Height="58" Width="256" FontSize="25"                     CornerRadius="10" Background="WhiteSmoke"/>
+        <Button x:ConnectionId='7' Content="Записать" Margin="296,328,0,0" Height="58" Width="256" FontSize="25" VerticalAlignment="Top" Background="SkyBlue" CornerRadius="10"                         />
         
     </Grid>
 </Page>
