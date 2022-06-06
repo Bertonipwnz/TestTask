@@ -1,0 +1,26 @@
+System.Text.Encodings.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+  System.Text.Encodings.Web.Resources.unicode8definedcharacters.bin
+Microsoft.AspNetCore.Http.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.AspNetCore.Http.Abstractions.Resources.resources
+Microsoft.Data.Sqlite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.Data.Sqlite.Strings.resources
+Microsoft.EntityFrameworkCore.Design, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.EntityFrameworkCore.Design.Properties.DesignStrings.resources
+Microsoft.EntityFrameworkCore, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.EntityFrameworkCore.Properties.CoreStrings.resources
+Microsoft.EntityFrameworkCore.Relational.Design, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.EntityFrameworkCore.Relational.Design.Properties.RelationalDesignStrings.resources
+Microsoft.EntityFrameworkCore.Relational, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.EntityFrameworkCore.Relational.Properties.RelationalStrings.resources
+Microsoft.EntityFrameworkCore.Sqlite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.EntityFrameworkCore.Sqlite.Properties.SqliteStrings.resources
+Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.Extensions.DependencyInjection.Abstractions.Resources.resources
+Microsoft.Extensions.DependencyInjection, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.Extensions.DependencyInjection.Resources.resources
+Microsoft.Extensions.Logging.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.Extensions.Logging.Abstractions.Resource.resources
+Microsoft.Extensions.Options, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.Extensions.Options.Resources.resources
+Microsoft.Extensions.Primitives, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+  Microsoft.Extensions.Primitives.Resources.resources

@@ -27,7 +27,7 @@ namespace TestTaskUWP.Data
                 {
                     db.Attach(model);
                     db.Update(model);
-                    
+
                 }
                 else
                 {

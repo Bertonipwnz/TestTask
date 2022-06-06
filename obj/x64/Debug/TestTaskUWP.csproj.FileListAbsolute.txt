@@ -273,3 +273,4 @@ D:\ProjectSharp\TestTaskUWP\obj\x64\Debug\FxResources.System.Xml.XDocument.SR.re
 D:\ProjectSharp\TestTaskUWP\obj\x64\Debug\FxResources.System.Xml.XmlDocument.SR.resw
 D:\ProjectSharp\TestTaskUWP\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
 D:\ProjectSharp\TestTaskUWP\obj\x64\Debug\TestTaskUWP.csproj.GenerateResource.Cache
+D:\ProjectSharp\TestTaskUWP\bin\x64\Debug\TestTransactions2.db

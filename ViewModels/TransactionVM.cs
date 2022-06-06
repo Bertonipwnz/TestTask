@@ -15,21 +15,19 @@ namespace TestTaskUWP.ViewModels
         private readonly Repository repository;
         public ObservableCollection<Transaction> Transactions { get; set; }
         public List<Transaction> TransactionsList { get; set; }
-     
+
         public TransactionVM()
         {
             transaction = new Transaction();
             repository = new Repository();
             //Запись всех данных таблицы в лист и коллекцию
-            using(TransactionContext db = new TransactionContext())
+            using (TransactionContext db = new TransactionContext())
             {
                 Transactions = new ObservableCollection<Transaction>(db.Transactions.ToList());
                 TransactionsList = new List<Transaction>(db.Transactions.ToList());
             }
-            
-
         }
-  
+
         public int ID_Transaction
         {
             get { return This.id_Transaction; }
@@ -80,7 +78,7 @@ namespace TestTaskUWP.ViewModels
         {
             repository.SaveTransaction(This);
         }
-        
+
         //Загрузка записи
         public void Load()
         {
@@ -101,28 +99,5 @@ namespace TestTaskUWP.ViewModels
             transaction = repository.LoadAmount();
             Amount_Money = transaction.amount_Money;
         }
-
-        /*  public void LoadTransactions()
-          {
-              var transactions = repository.GetAllTransaction();
-              TransactionsGG = new ObservableCollection<TransactionVM>();
-              foreach (var trans in transactions)
-              {
-                  var avm = new TransactionVM(trans);
-                  TransactionsGG.Add(avm);
-              }
-
-          }
-          public void LoadingTransaction()
-          {
-              ts = repository.GetAllTransaction();
-
-          }
-
-          */
-
-       
-
-
     }
 }

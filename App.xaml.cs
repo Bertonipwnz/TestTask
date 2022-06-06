@@ -20,6 +20,7 @@ namespace TestTaskUWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+           
         }
 
         /// <summary>

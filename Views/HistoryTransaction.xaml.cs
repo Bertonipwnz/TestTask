@@ -11,16 +11,11 @@ namespace TestTaskUWP.Views
     /// </summary>
     public sealed partial class HistoryTransaction : Page
     {
-
-
-        
         public HistoryTransaction()
         {
             this.InitializeComponent();
-         // Transaction = new TransactionVM();
-          //DataContext = Transaction;
-
-
+            // Transaction = new TransactionVM();
+            //DataContext = Transaction;
         }
         //public TransactionVM Transaction { get; set; }
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -28,9 +23,6 @@ namespace TestTaskUWP.Views
             //Попытка занести данные в кастомный DataGrid
             //TransactionContext db = new TransactionContext();
             // var data = (from d in db.Transactions select d).ToList();
-            
-            
-
         }
     }
 }
