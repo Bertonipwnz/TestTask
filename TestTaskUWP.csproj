@@ -119,16 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20220605121816_CreateTableTransaction.cs" />
-    <Compile Include="Migrations\20220605121816_CreateTableTransaction.designer.cs">
-      <DependentUpon>20220605121816_CreateTableTransaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20220605121937_CreateTableTransaction2.cs" />
-    <Compile Include="Migrations\20220605121937_CreateTableTransaction2.designer.cs">
-      <DependentUpon>20220605121937_CreateTableTransaction2.cs</DependentUpon>
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Migrations\20220606165319_InitIalMigration.cs" />
+    <Compile Include="Migrations\20220606165319_InitIalMigration.designer.cs">
+      <DependentUpon>20220606165319_InitIalMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\TransactionContextModelSnapshot.cs" />
-    <Compile Include="Data\Repository.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Data\TransactionContext.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -153,7 +149,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -161,6 +156,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -199,9 +195,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TestTransactions2.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

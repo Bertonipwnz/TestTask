@@ -1,7 +1,0 @@
-/In:"D:\ProjectSharp\TestTaskUWP\obj\x64\Release\ilc\in"
-/Lib:"D:\ProjectSharp\TestTaskUWP\obj\x64\Release\ilc\in"
-/Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\1.7.6\tools\x64\ilc\lib\Private"
-/WinMD:"D:\ProjectSharp\TestTaskUWP\obj\x64\Release\ilc\in\WinMetadata\Windows.winmd"
-/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"c6b236aa-0fdc-42cf-b562-27ddcc7f2961","Id":"6accc670-6bf0-4b58-8610-9c96aaea7f90","ProcessStartTime":637901052683962345,"BucketFiltersToEnableWatsonForFaults":[{"AdditionalProperties":[],"Id":"53126781-21df-4995-bac8-6c850c7c1efb","WatsonEventType":"VisualStudioMemWatson","BucketParameterFilters":["(?i)perfwatsonstarvation",null,null,null,null,null,null,null,null,null]}],"BucketFiltersToAddDumpsToFaults":[{"AdditionalProperties":[{"Key":"DumpType","Value":"Heap"}],"Id":"f4b056ec-63f0-4691-bc76-85d6a458d364","WatsonEventType":"VisualStudioNonFatalErrors2","BucketParameterFilters":[null,null,"vs.fault.faulttest",null,null,null,null,null,null,null]}]}"
-/RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\1.7.6\tools\LibraryXML"
-/RunOnlyPreDR

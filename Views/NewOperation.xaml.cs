@@ -3,6 +3,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using TestTaskUWP.ViewModels;
 
+
 namespace TestTaskUWP.Views
 {
     /// <summary>
@@ -20,7 +21,7 @@ namespace TestTaskUWP.Views
         /// <summary>
         /// Обнуление всех полей
         /// </summary>
-        private void Clear_Field(object sender, RoutedEventArgs e)
+        private void ClearFields(object sender, RoutedEventArgs e)
         {
             comboBoxForTypeOperation.SelectedItem = null;
             comboBoxForCategoryOperation.SelectedItem = null;
@@ -31,7 +32,7 @@ namespace TestTaskUWP.Views
         /// <summary>
         /// Кнопка добавления записи
         /// </summary>
-        private async void Add_Transaction(object sender, RoutedEventArgs e)
+        private async void AddTransaction(object sender, RoutedEventArgs e)
         {
             //Проверка ввода
             try
@@ -71,6 +72,7 @@ namespace TestTaskUWP.Views
                 };
                 await checkTextBox.ShowAsync();
             }
+            
         }
     }
 }

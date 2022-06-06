@@ -448,9 +448,6 @@
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\TestTransactions2.db">
       <PackagePath>TestTransactions2.db</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
@@ -477,6 +474,9 @@
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ProjectSharp\TestTaskUWP\bin\x64\Debug\TestTaskUWP.xr.xml">
       <PackagePath>TestTaskUWP.xr.xml</PackagePath>

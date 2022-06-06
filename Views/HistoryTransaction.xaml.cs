@@ -1,8 +1,4 @@
-﻿using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using TestTaskUWP.ViewModels;
-
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
+﻿using Windows.UI.Xaml.Controls;
 
 namespace TestTaskUWP.Views
 {
@@ -14,15 +10,6 @@ namespace TestTaskUWP.Views
         public HistoryTransaction()
         {
             this.InitializeComponent();
-            // Transaction = new TransactionVM();
-            //DataContext = Transaction;
-        }
-        //public TransactionVM Transaction { get; set; }
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            //Попытка занести данные в кастомный DataGrid
-            //TransactionContext db = new TransactionContext();
-            // var data = (from d in db.Transactions select d).ToList();
         }
     }
 }

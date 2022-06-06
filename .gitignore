@@ -1,6 +1,3 @@
-/.vs
-/bin
-/obj
-/Assets
-/Migrations
-/Pacakge.appxmanifest
+bin/
+.vs/
+New/

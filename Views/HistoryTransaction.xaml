@@ -28,21 +28,21 @@
         <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="0,30,1104,0">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind date_and_Time_Transaction}" Margin="10,0,0,0"/>
+                    <TextBlock Text="{x:Bind DateAndTimeTransaction}" Margin="10,0,0,0"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="190,30,950,0"  >
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind amount_Transaction}" Margin="32,0,0,0"/>
+                    <TextBlock Text="{x:Bind AmountTransaction}" Margin="32,0,0,0"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="344,30,820,0">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind type_Transaction}" Margin="30,0,0,0"/>
+                    <TextBlock Text="{x:Bind TypeTransaction}" Margin="30,0,0,0"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
@@ -50,14 +50,14 @@
         <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="474,30,620,0" >
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind category_Transaction}" Margin="25,0,0,0" />
+                    <TextBlock Text="{x:Bind CategoryTransaction}" Margin="25,0,0,0" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="674,30,350,0">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind comment_Transaction}" Margin="10,0,0,0"/>
+                    <TextBlock Text="{x:Bind CommentTransaction}" Margin="10,0,0,0"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

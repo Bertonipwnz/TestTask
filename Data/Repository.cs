@@ -10,37 +10,39 @@ namespace TestTaskUWP.Data
     /// </summary>
     public class Repository
     {
-        //Сохранение записи
+        /// <summary>
+        /// Метод для сохранения данных записи в БД
+        /// </summary>
+        /// <param name="model">Модель таблицы</param>
         public void SaveTransaction(Transaction model)
         {
             using (var db = new TransactionContext())
             {
                 //Устанавливаем для входящей записи текущее время и дату
-                model.date_and_Time_Transaction = DateTime.Now;
+                model.DateAndTimeTransaction = DateTime.Now;
                 //Проверка доход или расход, в зависимости от этого отнимаем или прибавляем к сумме
-                if (model.type_Transaction == "Доход")
+                if (db.Transactions.Count() > 0)
                 {
-                    model.amount_Money = db.Transactions.Last().amount_Money + model.amount_Transaction;
+                    if (model.TypeTransaction == "Доход")
+                    {
+                        model.AmountMoney = db.Transactions.LastOrDefault().AmountMoney + model.AmountTransaction;
+                    }
+                    else
+                        model.AmountMoney = db.Transactions.LastOrDefault().AmountMoney - model.AmountTransaction;
                 }
-                else
+                else model.AmountMoney += model.AmountTransaction;
+                if (model.IdTransaction > 0)
                 {
-                    model.amount_Money = db.Transactions.Last().amount_Money - model.amount_Transaction;
-                }
-
-                //Добавление данных в базу
-                if (model.id_Transaction > 0)
-                {
+                    //Добавление данных в базу
                     db.Attach(model);
                     db.Update(model);
-
                 }
                 else
                 {
                     db.Add(model);
                 }
-                //Сохранение базы
+                //Сохранение базы    
                 db.SaveChanges();
-
             }
         }
 
@@ -58,9 +60,13 @@ namespace TestTaskUWP.Data
         {
             using (var db = new TransactionContext())
             {
-                return (from t in db.Transactions select t).Last();
+                if (db.Transactions.Count() > 0)
+                {
+                    return (from t in db.Transactions select t).Last();
+                }
+                else return null;
+                
             }
         }
-
     }
 }
