@@ -8,9 +8,8 @@ namespace TestTaskUWP.Data
 {
     class TransactionContext : DbContext
     {
- 
         public DbSet<Transaction> Transactions { get; set; }
-   
+
         //Доступ к файлу бд в корневой папке
         public async Task GetFileDB()
         {
@@ -29,7 +28,7 @@ namespace TestTaskUWP.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            Task.Run(() => GetFileDB());      
+            Task.Run(() => GetFileDB());
             options.UseSqlite($"Data Source =TestTransactions2.db");
             base.OnConfiguring(options);
         }

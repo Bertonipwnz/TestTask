@@ -1,5 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
-
+using TestTaskUWP.ViewModels;
 namespace TestTaskUWP.Views
 {
     /// <summary>

@@ -6,74 +6,84 @@
     xmlns:VM="using:TestTaskUWP.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
-   
     mc:Ignorable="d">
 
 
     <Page.DataContext>
-        <VM:TransactionVM x:Name="ViewModel" />
+        <VM:ShowAllTransactionViewModel x:Name="ViewModel"/>
     </Page.DataContext>
     <Page.Resources>
-
         <CollectionViewSource x:Name="TransactionViews" Source="{x:Bind ViewModel.Transactions}" />
     </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="Дата" FontSize="20" Margin="0,0,1150,0" TextAlignment="Center"/>
-        <TextBlock Text="Сумма" FontSize="20" Margin="100,0,900,0" TextAlignment="Center"/>
-        <TextBlock Text="Тип" FontSize="20" Margin="190,0,680,0" TextAlignment="Center"/>
-        <TextBlock Text="Категория" FontSize="20" Margin="190,0,350,0" TextAlignment="Center"/>
-        <TextBlock Text="Комментарий" FontSize="20" Margin="580,0,390,0" TextAlignment="Center"/>
-        
-        <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="0,30,1104,0">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind DateAndTimeTransaction}" Margin="10,0,0,0"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="190,30,950,0"  >
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind AmountTransaction}" Margin="32,0,0,0"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="344,30,820,0">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind TypeTransaction}" Margin="30,0,0,0"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+    <ScrollViewer>
+        <Viewbox Stretch="UniformToFill">
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="160"></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="170"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Дата" 
+                       FontSize="20" TextAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" 
+                       Text="Сумма" FontSize="20" TextAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" 
+                       Text="Тип" FontSize="20" TextAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="3" 
+                       Text="Категория" FontSize="20" TextAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="4"
+                       Text="Комментарий" FontSize="20" TextAlignment="Center"/>
 
-        <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="474,30,620,0" >
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind CategoryTransaction}" Margin="25,0,0,0" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" Margin="674,30,350,0">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Transaction">
-                    <TextBlock Text="{x:Bind CommentTransaction}" Margin="10,0,0,0"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <!-- попытка занести данные в datagrid -->
-        <!--  <controls:DataGrid x:Name="dataGrid1" Height="600" Margin="12" AutoGenerateColumns = "False" ItemsSource="{Binding Source={StaticResource TransactionViews}}">
-            <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Дата"  Width="150" Binding="{Binding Date_and_Time_Transaction}"  FontSize="20" />
-                <controls:DataGridTextColumn Header="Сумма"  Width="150" Binding="{Binding Amount_Transaction}"  FontSize="20" />
-                <controls:DataGridTextColumn Header="Тип" Width="150" Binding="{Binding Type_Transaction}" />
-                <controls:DataGridTextColumn Header="Категория" Width="150" Binding="{Binding Category_Transaction}" />
-                <controls:DataGridTextColumn Header="Комментарий" Width="150" Binding="{Binding Comment_Transaction} "/>
+                <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}"  
+                      BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Transaction">
+                            <TextBlock Text="{x:Bind DateAndTimeTransaction}" Margin="10,0,0,0"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" 
+                  BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Transaction">
+                            <TextBlock Text="{x:Bind AmountTransaction}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" 
+                  BorderBrush="Black" BorderThickness="1" Width="170" Grid.Column="2" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Transaction">
+                            <TextBlock Text="{x:Bind TypeTransaction}" Margin="50,0,0,0" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
-            </controls:DataGrid.Columns>
-        </controls:DataGrid>-->
-
-    </Grid>
+                <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}"  
+                  BorderBrush="Black" BorderThickness="1" Grid.Column="3" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Transaction">
+                            <TextBlock Text="{x:Bind CategoryTransaction}" Margin="25,0,0,0" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView ItemsSource="{Binding Source={StaticResource TransactionViews}}" 
+                  BorderBrush="Black" BorderThickness="1" Grid.Column="4" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Transaction">
+                            <TextBlock Text="{x:Bind CommentTransaction}" Margin="0,0,0,0"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Viewbox>
+    </ScrollViewer>
 </Page>
 
 

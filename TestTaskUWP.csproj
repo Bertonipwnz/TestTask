@@ -124,11 +124,18 @@
     <Compile Include="Migrations\20220606165319_InitIalMigration.designer.cs">
       <DependentUpon>20220606165319_InitIalMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20220609151059_test.cs" />
+    <Compile Include="Migrations\20220609151059_test.designer.cs">
+      <DependentUpon>20220609151059_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\TransactionContextModelSnapshot.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Data\TransactionContext.cs" />
+    <Compile Include="ViewModels\AddNewTransactionViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\TransactionVM.cs" />
+    <Compile Include="Converters\IntConverter.cs" />
+    <Compile Include="ViewModels\ShowAllMoneyViewModel.cs" />
+    <Compile Include="ViewModels\ShowAllTransactionViewModel.cs" />
     <Compile Include="Views\HistoryTransaction.xaml.cs">
       <DependentUpon>HistoryTransaction.xaml</DependentUpon>
     </Compile>
@@ -136,8 +143,8 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\NewOperation.xaml.cs">
-      <DependentUpon>NewOperation.xaml</DependentUpon>
+    <Compile Include="Views\NewTransactionView.xaml.cs">
+      <DependentUpon>NewTransactionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Score.xaml.cs">
       <DependentUpon>Score.xaml</DependentUpon>
@@ -171,7 +178,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\NewOperation.xaml">
+    <Page Include="Views\NewTransactionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +198,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmLight">
+      <Version>5.4.1.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

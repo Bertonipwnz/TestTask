@@ -1,9 +1,4 @@
-﻿using System.Linq;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using TestTaskUWP.Models;
-using Windows.UI.Xaml.Navigation;
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
+﻿using Windows.UI.Xaml.Controls;
 
 namespace TestTaskUWP.Views
 {
@@ -20,7 +15,6 @@ namespace TestTaskUWP.Views
 
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-
             var item = args.InvokedItemContainer;
             // Содержимое выбранного элемента
             switch (item.Name)
@@ -32,9 +26,8 @@ namespace TestTaskUWP.Views
                     ContentFrame.Navigate(typeof(Score));
                     break;
                 case "NewOperation":
-                    ContentFrame.Navigate(typeof(NewOperation));
+                    ContentFrame.Navigate(typeof(NewTransactionView));
                     break;
-
             }
         }
     }

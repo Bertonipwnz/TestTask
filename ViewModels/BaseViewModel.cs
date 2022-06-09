@@ -12,7 +12,6 @@ namespace TestTaskUWP.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-
         protected bool SetProperty<T>(ref T field, T value, [CallerMemberName] string property = null)
         {
             if (EqualityComparer<T>.Default.Equals(field, value)) return false;
@@ -20,7 +19,6 @@ namespace TestTaskUWP.ViewModels
             RaisePropertyChanged(property);
             return true;
         }
-
 
         protected void SetProperty<T>(T currentValue, T newValue, Action doSet, [CallerMemberName] string property = null)
         {
@@ -46,4 +44,6 @@ namespace TestTaskUWP.ViewModels
             This = thing ?? new T();
         }
     }
+
+ 
 }

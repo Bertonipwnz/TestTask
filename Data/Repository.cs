@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using TestTaskUWP.Models;
 
@@ -23,14 +22,14 @@ namespace TestTaskUWP.Data
                 //Проверка доход или расход, в зависимости от этого отнимаем или прибавляем к сумме
                 if (db.Transactions.Count() > 0)
                 {
-                    if (model.TypeTransaction == "Доход")
+                    if (model.TypeTransaction == "Зачисление")
                     {
-                        model.AmountMoney = db.Transactions.LastOrDefault().AmountMoney + model.AmountTransaction;
+                        model.AmountMoney = db.Transactions.LastOrDefault().AmountMoney + Convert.ToInt32(model.AmountTransaction);
                     }
                     else
-                        model.AmountMoney = db.Transactions.LastOrDefault().AmountMoney - model.AmountTransaction;
+                        model.AmountMoney = db.Transactions.LastOrDefault().AmountMoney - Convert.ToInt32(model.AmountTransaction);
                 }
-                else model.AmountMoney += model.AmountTransaction;
+                else model.AmountMoney += Convert.ToInt32(model.AmountTransaction);
                 if (model.IdTransaction > 0)
                 {
                     //Добавление данных в базу
@@ -42,7 +41,8 @@ namespace TestTaskUWP.Data
                     db.Add(model);
                 }
                 //Сохранение базы    
-                db.SaveChanges();
+                db.SaveChangesAsync();
+
             }
         }
 
@@ -65,7 +65,7 @@ namespace TestTaskUWP.Data
                     return (from t in db.Transactions select t).Last();
                 }
                 else return null;
-                
+
             }
         }
     }

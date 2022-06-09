@@ -1,6 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
 using TestTaskUWP.ViewModels;
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TestTaskUWP.Views
 {
@@ -9,12 +8,12 @@ namespace TestTaskUWP.Views
     /// </summary>
     public sealed partial class Score : Page
     {
+        public ShowAllMoneyViewModel Transaction { get; set; }
         public Score()
         {
             this.InitializeComponent();
-            Transaction = new TransactionVM();
+            Transaction = new ShowAllMoneyViewModel();
             Transaction.LoadAmount();
-        }
-        public TransactionVM Transaction { get; set; }
+        }    
     }
 }

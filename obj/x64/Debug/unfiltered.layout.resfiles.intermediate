@@ -10,7 +10,7 @@ App.xbf
 TestTaskUWP.xr.xml
 Views\HistoryTransaction.xbf
 Views\MainPage.xbf
-Views\NewOperation.xbf
+Views\NewTransactionView.xbf
 Views\Score.xbf
 Properties\Default.rd.xml
 TestTransactions2.db

@@ -19,28 +19,28 @@ namespace TestTaskUWP.Models
         [Required]
         [MaxLength(10)]
         public int AmountTransaction { get; set; }
-        
-        
+
+
         //Дата и время операции - обязательное поле, заполняется текущей датой и временем на момент операции
         [Required]
         public DateTime DateAndTimeTransaction { get; set; }
-        
-        
+
+
         //Тип операции - обязательное поле, текстовое
         [Required]
         public string TypeTransaction { get; set; }
-        
-        
+
+
         //Категория операции - обязательное поле, текстовое
         [Required]
         public string CategoryTransaction { get; set; }
-        
-        
+
+
         //Комментарий - необязательное, максимальная длина - 30, текстовое
         [MaxLength(30)]
         public string CommentTransaction { get; set; }
-        
-        
+
+
         //Баланс - баланс на момент совершения операции
         public int AmountMoney { get; set; }
     }

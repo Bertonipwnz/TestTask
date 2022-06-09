@@ -6,10 +6,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-        <TextBlock Text="Баланс:" FontSize="30" Margin="10,24,0,0"/>
-        <TextBlock Text ="$" FontSize="40" Margin="10,60,0,0" FontWeight="Bold"/>
-        <TextBlock Text="{x:Bind Transaction.Amount_Money}" FontSize="40" Margin="34,60,0,0" FontWeight="Bold"/>
-    </Grid>
+    
+    <Viewbox Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid Margin="0,0,380,235">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Баланс:" FontSize="30" />
+            
+            <TextBlock Grid.Column="0" Grid.Row="1" Text ="$" FontSize="40" FontWeight="Bold"/>
+            
+            <TextBlock Grid.Row="1" Text="{x:Bind Transaction.Amount_Money}" FontSize="40" FontWeight="Bold" 
+                       Grid.Column="0" Margin="20,0,0,0"/>
+        </Grid>
+    </Viewbox>
 </Page>
